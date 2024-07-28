@@ -1,6 +1,6 @@
 import "./Expenses.css";
 import ExpenseItem from "../ExpenseItem/ExpenseItem";
-import Card from "../Card/Card";
+import Card from "../../Card/Card";
 function Expenses({ expenses }) {
   return (
     <Card className="expenses">

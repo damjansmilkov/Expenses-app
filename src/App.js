@@ -1,4 +1,4 @@
-import Expenses from "./components/ExpenseItemDetails/Expenses";
+import Expenses from "./components/Expenses/ExpenseItemDetails/Expenses";
 
 const hardcoded = [
   {
