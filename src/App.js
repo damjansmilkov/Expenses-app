@@ -1,6 +1,6 @@
 import Expenses from "./components/ExpenseItemDetails/Expenses";
 
-const expenses = [
+const hardcoded = [
   {
     id: "e1",
     title: "Toilet Paper",
@@ -25,7 +25,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      <Expenses expenses={expenses}></Expenses>
+      <Expenses expenses={hardcoded}></Expenses>
     </div>
   );
 }
