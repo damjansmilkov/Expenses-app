@@ -1,4 +1,6 @@
+
 import Expenses from "./components/Expenses/ExpenseItemDetails/Expenses";
+import UserInput from "./components/UserInput/UserInput/UserInput";
 
 const hardcoded = [
   {
@@ -21,11 +23,17 @@ const hardcoded = [
     date: new Date(2021, 5, 12),
   },
 ];
+
+function addExpenseHandler(expense) {
+  console.log("in App.js");
+  console.log(expense);
+}
 function App() {
+  
   return (
     <div>
-      <h2>Let's get started!</h2>
-      <Expenses expenses={hardcoded}></Expenses>
+      <UserInput onAddExpense={addExpenseHandler} />
+      <Expenses items={hardcoded} />
     </div>
   );
 }
