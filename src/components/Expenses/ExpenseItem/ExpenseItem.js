@@ -3,7 +3,6 @@ import Card from "../../Card/Card";
 import ExpenseDate from "../ExpenseDate/ExpenseDate";
 
 function ExpenseItem(properties) {
-  
   return (
     <Card className="expense-item">
       <ExpenseDate date={properties.date} />
@@ -11,8 +10,8 @@ function ExpenseItem(properties) {
         <h2>{properties.title}</h2>
         <div className="expense-item__price">${properties.amount}</div>
       </div>
-      <div >
-      </div>
+      
+      
     </Card>
   );
 }
