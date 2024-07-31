@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./ExpenseForm.css";
+
 function ExpenseForm(properties) {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredPrice, setEnteredPrice] = useState("");
@@ -21,14 +22,17 @@ function ExpenseForm(properties) {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      price: enteredPrice,
+      price: +enteredPrice,
       date: new Date(enteredDate),
     };
     properties.onSaveExpenseData(expenseData);
     setEnteredTitle("");
     setEnteredPrice("");
     setEnteredDate("");
-    
+  }
+
+  if (!properties.showForm) {
+    return null;
   }
 
   return (
@@ -56,7 +60,7 @@ function ExpenseForm(properties) {
           <label style={{ color: "white" }}>Date</label>
           <input
             type="date"
-            min="2023-01-01"
+            min="2022-01-01"
             max="2026-12-31"
             value={enteredDate}
             onChange={dateChangeHandler}
@@ -64,6 +68,9 @@ function ExpenseForm(properties) {
         </div>
       </div>
       <div className="expense-form__actions">
+        <button type="button" onClick={properties.Cancel}>
+          Cancel
+        </button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
