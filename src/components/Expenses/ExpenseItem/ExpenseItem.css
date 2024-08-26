@@ -3,9 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    scale: 1;
     padding: 0.5rem;
     margin: 1rem 0;
-    background-color: rgba(37, 158, 95, 0.813);
+    background-color: #0a0066;
   }
   
   .expense-item__description {
