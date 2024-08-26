@@ -24,6 +24,7 @@ function UserInput(properties) {
       {!showForm && <button onClick={showFormHandler}>Show Form</button>}
       {showForm && (
         <ExpenseForm
+        showFormHandler={showFormHandler}
           onSaveExpenseData={saveExpenseDataHandler}
           showForm={showForm}
           Cancel={hideFormHandler}

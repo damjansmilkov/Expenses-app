@@ -20,6 +20,7 @@ function ExpenseForm(properties) {
 
   function submitHandler(event) {
     event.preventDefault();
+
     const expenseData = {
       title: enteredTitle,
       price: +enteredPrice,
@@ -29,16 +30,20 @@ function ExpenseForm(properties) {
     setEnteredTitle("");
     setEnteredPrice("");
     setEnteredDate("");
+    properties.showFormHandler();
   }
 
   if (!properties.showForm) {
     return null;
   }
+  const isFormvalid = enteredTitle && enteredPrice && enteredDate;
 
   return (
     <form onSubmit={submitHandler}>
       <div className="expense-form__controls">
-        <div className="expense-form__controls">
+        <div
+          className="expense-form__controls"
+        >
           <label style={{ color: "white" }}>Expense</label>
           <input
             type="text"
@@ -71,7 +76,7 @@ function ExpenseForm(properties) {
         <button type="button" onClick={properties.Cancel}>
           Cancel
         </button>
-        <button type="submit">Add Expense</button>
+        <button type="submit" disabled={!isFormvalid}>Add Expense</button>
       </div>
     </form>
   );
