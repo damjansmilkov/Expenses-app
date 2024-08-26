@@ -21,10 +21,12 @@ function UserInput(properties) {
 
   return (
     <div className="user-input">
-      {!showForm && <button onClick={showFormHandler}>Show Form</button>}
+      <div className='expense-form__actions'>
+        {!showForm && <button onClick={showFormHandler}>Show Form</button>}
+      </div>
       {showForm && (
         <ExpenseForm
-        showFormHandler={showFormHandler}
+          showFormHandler={showFormHandler}
           onSaveExpenseData={saveExpenseDataHandler}
           showForm={showForm}
           Cancel={hideFormHandler}

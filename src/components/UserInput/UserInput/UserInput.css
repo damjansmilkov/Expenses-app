@@ -7,31 +7,34 @@
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    scale: 1.3;
   }
   
-  .user-input button {
-    font: inherit;
-    cursor: pointer;
-    padding: 1rem 2rem;
-    border: 1px solid #40005d;
-    background-color: #7EC8E3;
-    color: white;
-    border-radius: 12px;
-    margin-right: 1rem;
-  }
   
   .user-input button:hover,
   .user-input button:active {
     background-color: #510674;
     border-color: #510674;
   }
+
   
-  .user-input button.alternative {
-    color: #220131;
-    border-color: transparent;
-    background-color: transparent;
+
+  .expense-form__actions{
+    display:flex;
+    justify-content: center;
   }
+  .expense-form__actions button {
+    scale: 1.2;
+    background-color: #29dfd0; /* Green */
+    color: white;
+    box-shadow: 0 2px #000000;
+    margin-right: 24px;
+    padding: 10px 20px;
+    border: none;
+    width: auto;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+  }
+
   
-  .user-input button.alternative:hover,
-  .user-input button.alternative:active {
-    background-color: #ddb3f8;}
