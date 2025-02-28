@@ -27,8 +27,8 @@ function Expenses(properties) {
           selectedYear={selectedYear}
           onYearFilter={filterYearHandler}
         />
-        <ExpensesChart expenses={filteredExpenses}/>
-        <ExpensesList items={filteredExpenses} />
+        <ExpensesChart expenses={filteredExpenses} />
+        <ExpensesList items={filteredExpenses} onDeleteExpense={properties.onDeleteExpense}/>
       </Card>
     </li>
   );

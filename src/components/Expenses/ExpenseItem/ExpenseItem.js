@@ -10,8 +10,10 @@ function ExpenseItem(properties) {
         <h2>{properties.title}</h2>
         <div className="expense-item__price">${properties.amount}</div>
       </div>
-      
-      
+      {/* Копче за бришење на трошокот */}
+      <button className="delete-btn" onClick={properties.onDelete}>
+        Delete
+      </button>
     </Card>
   );
 }

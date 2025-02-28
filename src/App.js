@@ -1,39 +1,37 @@
 import React, { useState } from "react";
 import Expenses from "./components/Expenses/ExpenseItemDetails/Expenses";
 import UserInput from "./components/UserInput/UserInput/UserInput";
-import {ImageBackground, View} from 'react';
-
-const image = {url : 'https://wallpapers.com/images/featured/google-calendar-background-tfpb8g86k386xz0l.webp'}
 
 export const hardcoded = [
   {
-    id: [''],
-    title: [''],
-    price: [''],
-    date: new Date("" ),
+    id: [""],
+    title: [""],
+    price: [""],
+    date: new Date(""),
   },
-  
 ];
 
 function App() {
-  <View >
-    <ImageBackground source={image} >
-    </ImageBackground>
-  </View>
-
   const [expenses, setExpenses] = useState(hardcoded);
 
+  // Функција за додавање трошоци
   function addExpenseHandler(expenseData) {
     setExpenses((prevExpenses) => {
       return [expenseData, ...prevExpenses];
     });
   }
 
+  // Функција за бришење трошоци
+  function deleteExpenseHandler(id) {
+    setExpenses((prevExpenses) =>
+      prevExpenses.filter((expense) => expense.id !== id)
+    );
+  }
+
   return (
-    <div >
-      
+    <div>
       <UserInput onAddExpense={addExpenseHandler} />
-      <Expenses items={expenses} />
+      <Expenses items={expenses} onDeleteExpense={deleteExpenseHandler} />
     </div>
   );
 }

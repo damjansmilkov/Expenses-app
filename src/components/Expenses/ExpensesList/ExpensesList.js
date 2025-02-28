@@ -1,5 +1,6 @@
 import ExpenseItem from "../ExpenseItem/ExpenseItem";
 import "./ExpensesList.css";
+
 function ExpensesList(properties) {
   if (properties.items.length === 0) {
     return (
@@ -8,6 +9,7 @@ function ExpensesList(properties) {
       </h2>
     );
   }
+
   return (
     <ul className="expenses-list">
       {properties.items.map((expense) => (
@@ -16,6 +18,7 @@ function ExpensesList(properties) {
           title={expense.title}
           amount={expense.price}
           date={expense.date}
+          onDelete={() => properties.onDeleteExpense(expense.id)} // Додадена функција за бришење
         />
       ))}
     </ul>
