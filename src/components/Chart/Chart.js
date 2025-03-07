@@ -2,8 +2,7 @@ import ChartBar from "./ChartBar";
 import "./Chart.css";
 
 const Chart = (properties) => {
-    
-  const valueAray = properties.dataPoint.map(dataPoint => dataPoint.value);
+  const valueAray = properties.dataPoint.map((dataPoint) => dataPoint.value);
   const totalMax = Math.max(...valueAray);
   return (
     <div className="chart">
