@@ -9,7 +9,9 @@ html {
 }
 
 body {
-  background-image: url('C:\Users\thera\Desktop\Learning programming\First-project\first-app\starting-setup\src\Picture\background.jpg');
+  background-image: url('/Users/anadzamgozova/Desktop/ExpenesesApp/Expenses-app-main/src/Picture/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat; 
   margin: 0;
   background-color: #050A30
 
